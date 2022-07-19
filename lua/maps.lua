@@ -32,3 +32,6 @@ map('c', '<C-k>', '<LEFT>', options)
 map('c', '<C-j>', '<RIGHT>', options)
 map('t', '<C-x>', '<C-\\><C-N>', options)
 
+map('n', '<c-s>', '/', options)
+map('i', '<c-s>', '<esc>/', options)
+map('v', '<c-s>', '/', options)

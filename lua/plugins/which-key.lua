@@ -14,7 +14,7 @@ wk.register({
 
     -- file and buffer movement
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
-    F = { "<cmd>Telescope file_browser<cr>", "File browser" },
+    F = { "<cmd>Telescope file_browser<cr>", "Telescope file browser" },
     s = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
     S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
     l = { "<cmd>Telescope buffers<cr>", "Buffers" },
@@ -52,10 +52,10 @@ wk.register({
     },
 
     n = {
-        name = "File browser",
-        n = { "<cmd>NvimTreeToggle<cr>", "Toggle"},
-        r = { "<cmd>NvimTreeRefresh<cr>", "Refresh"},
-        f = { "<cmd>NvimTreeFindFile<cr>", "Find file"},
+        name = "Neotree",
+        n = { "<cmd>NeoTreeFocusToggle<cr>", "Toggle"},
+        f = { "<cmd>NeoTreeFloatToggle<cr>", "Float Toggle" },
+        r = { "<cmd>NeoTreeReveal<cr>", "Reveal"},
     },
 
     G = { "<cmd>Neogit<cr>", "Git" },

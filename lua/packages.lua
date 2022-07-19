@@ -109,12 +109,16 @@ return require('packer').startup(function(use)
         "natecraddock/telescope-zf-native.nvim"
     }
 
-    -- tree
+    -- neotree
     use {
-        'kyazdani42/nvim-tree.lua',
-        cmd = { 'NvimTreeToggle', 'NvimTreeFindFile' },
-        config = function() require('plugins.tree') end,
-        requires = 'kyazdani42/nvim-web-devicons'
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v2.x",
+        requires = {
+        "nvim-lua/plenary.nvim",
+        "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+        "MunifTanjim/nui.nvim",
+        },
+        config = function() require('plugins.neotree') end,
     }
 
     use {
