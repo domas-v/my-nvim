@@ -198,6 +198,12 @@ return require('packer').startup(function(use)
     --     'theHamsta/nvim-dap-virtual-text',
     -- }
 
+    -- markdown
+    use {
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    }
+
     -- misc
     use {
         'dstein64/vim-startuptime',
