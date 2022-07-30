@@ -2,7 +2,6 @@ return require('packer').startup(function(use)
     -- packer itself
     use {
         'wbthomason/packer.nvim',
-        opt=true,
     }
     use {
         'ggandor/lightspeed.nvim',
@@ -138,7 +137,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         config = function() require('plugins.lualine') end,
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        requires =  'kyazdani42/nvim-web-devicons' 
     }
 
     -- tabs/buffers/windows
