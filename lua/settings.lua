@@ -9,10 +9,27 @@ cmd [[filetype plugin indent on]]
 cmd [[set hidden]]
 cmd [[set clipboard+=unnamedplus]]
 
-------------------------------------------------
+-- providers
+vim.g["python3_host_prog"] = "~/venv/bin/python3"
+vim.g["loaded_ruby_provider"] = 0
+vim.g["loaded_perl_provider"] = 0
+
 -- colors
 o.termguicolors = true
 o.background = "dark"
+
+require('nightfox').setup({
+    options = {
+        styles = {
+          comments = "italic",
+          keywords = "bold",
+          types = "italic,bold",
+          functions = "italic",
+        }
+    }
+})
+
+cmd [[colorscheme nightfox]]
 
 -- local catppuccin = require("catppuccin")
 -- catppuccin.setup({
@@ -49,17 +66,6 @@ o.background = "dark"
 --     }
 -- })
 -- cmd [[colorscheme catppuccin]]
-require('nightfox').setup({
-    options = {
-        styles = {
-          comments = "italic",
-          keywords = "bold",
-          types = "italic,bold",
-          functions = "italic",
-        }
-    }
-})
-cmd [[colorscheme nightfox]]
 
 -- tabs and spaces
 o.tabstop = 4
@@ -71,7 +77,6 @@ o.swapfile = false
 -- line numbers
 wo.linebreak = true
 o.number = true
--- o.relativenumber = true
 
 -- random stuff
 o.mouse = "a"
@@ -91,7 +96,6 @@ o.shiftround = true
 o.wrap = false
 
 -- neovide settings
--- cmd [[set guifont=Hack\ Nerd\ Font:h10]]
 cmd [[set guifont=JetBrains\ Mono:h10]]
 g['neovide_fullscreen'] = false
 
