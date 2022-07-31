@@ -15,8 +15,3 @@ augroup illuminate_augroup
     autocmd!
     autocmd VimEnter * hi link illuminatedWord Visual
 augroup END
-
-
-if has('nvim') && !empty($CONDA_PREFIX)
-  let g:python3_host_prog = $CONDA_PREFIX . '/bin/python'
-endif

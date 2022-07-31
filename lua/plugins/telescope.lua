@@ -77,9 +77,9 @@ require("telescope").setup {
         lsp_references = {
             theme = "ivy",
         },
-        -- lsp_workspace_diagnostics = {
-        --     theme = "ivy"
-        -- },
+        lsp_workspace_diagnostics = {
+            theme = "ivy"
+        },
         current_buffer_fuzzy_find = {
             theme = "ivy",
         },

@@ -7,10 +7,7 @@ require('nvim-treesitter.configs').setup {
         "rust",
         "go",
         "dockerfile",
-        "markdown",
-        "markdown_inline",
         "json",
-        "json5",
         "toml",
         "yaml"
     },

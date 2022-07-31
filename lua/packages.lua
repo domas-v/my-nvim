@@ -55,6 +55,10 @@ return require('packer').startup(function(use)
         config = function() require('plugins.lsp_settings') end
     }
     use { "jose-elias-alvarez/null-ls.nvim" }
+    use {
+        "williamboman/mason.nvim",
+        config = function() require("mason").setup() end
+    }
 
     -- completion
     use {
