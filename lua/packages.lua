@@ -45,8 +45,8 @@ return require('packer').startup(function(use)
 
     -- autosave
     use {
-        'Pocco81/AutoSave.nvim',
-        config = function() require('plugins.autosave') end,
+        'Pocco81/auto-save.nvim',
+        config = function() require("auto-save") end,
     }
 
     -- lsp
@@ -73,7 +73,6 @@ return require('packer').startup(function(use)
             'onsails/lspkind-nvim',
             'ray-x/cmp-treesitter',
             'github/copilot.vim',
-            -- 'saadparwaiz1/cmp_luasnip',
         }
 
     -- problems
@@ -159,11 +158,6 @@ return require('packer').startup(function(use)
     }
     use {
         "simeji/winresizer"
-    }
-
-    -- symbols outline
-    use {
-        "simrat39/symbols-outline.nvim"
     }
 
     -- git

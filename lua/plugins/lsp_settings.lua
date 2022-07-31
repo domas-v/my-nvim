@@ -8,7 +8,7 @@ cmp.setup({
     snippet = {
         expand = function(args)
             vim.fn["vsnip#anonymous"](args.body)
-            require('luasnip').lsp_expand(args.body)
+            -- require('luasnip').lsp_expand(args.body)
         end,
     },
     mapping = {
@@ -38,7 +38,7 @@ cmp.setup({
                 nvim_lsp = "[LSP]",
                 buffer = "[Buffer]",
                 treesitter = "[Tree]",
-                luasnip = "[Luasnip]",
+                vsnip = "[VSnip]",
                 nvim_lua = "[Lua]",
             })
     })

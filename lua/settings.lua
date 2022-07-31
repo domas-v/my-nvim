@@ -8,6 +8,7 @@ cmd [[syntax enable]]
 cmd [[filetype plugin indent on]]
 cmd [[set hidden]]
 cmd [[set clipboard+=unnamedplus]]
+cmd [[set signcolumn=yes:1]]
 
 -- providers
 vim.g["python3_host_prog"] = "~/.venv/bin/python3"
@@ -30,42 +31,6 @@ require('nightfox').setup({
 })
 
 cmd [[colorscheme nightfox]]
-
--- local catppuccin = require("catppuccin")
--- catppuccin.setup({
---     transparent_background = false,
---     term_colors = true,
---     styles = {
---         keywords = "NONE",
---         variables = "NONE",
---         strings = "NONE",
---         comments = "italic",
---         functions = "italic",
---     },
---     integrations = {
---         treesitter = true,
---         lsp_trouble = true,
---         cmp = true,
---         which_key = true,
---         neogit = true,
---         lightspeed = false,
---         ts_rainbow = true,
---         barbar = true,
---         gitsigns = true,
---         telescope = true,
---         dashboard = true,
---         indent_blankline = {
---             enabled = true,
---             colored_indent_levels = true,
---         },
---         nvimtree = {
---             enabled = true,
---             show_root = true,
---             transparent_panel = true,
---         },
---     }
--- })
--- cmd [[colorscheme catppuccin]]
 
 -- tabs and spaces
 o.tabstop = 4
