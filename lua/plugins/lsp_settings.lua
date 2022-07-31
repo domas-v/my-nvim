@@ -84,6 +84,10 @@ lsp.jedi_language_server.setup({
     on_attach=on_attach,
     capabilities=capabilities,
 })
+lsp.gopls.setup({
+    on_attach=on_attach,
+    capabilities=capabilities,
+})
 lsp.dockerls.setup({
     on_attach=on_attach,
     capabilities=capabilities
@@ -133,11 +137,12 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
     on_attach = on_attach,
     sources = {
+        diagnostics.golangci_lint,
         diagnostics.flake8,
         diagnostics.mypy.with({
             extra_args = {"--ignore-missing-imports", "--exclude=setup.py", "--exclude='test_'"
             }
-        })
+        }),
     },
     capabilities=capabilities
 })
