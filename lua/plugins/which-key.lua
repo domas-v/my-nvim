@@ -75,7 +75,7 @@ wk.register({
         name = "Files",
         e = { ":e ", "Open file" },
         f = { "<cmd>w<cr>", "Save current file" },
-        c = { "<cmd>lua OpenRC()<cr>", "Open config" },
+        c = { "<cmd>OpenConfig<cr>", "Open config" },
         v = { ":vert sp ", "Split vertical" },
         x = { ":sp ", "Split horizontal" },
     },
