@@ -11,12 +11,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- colorschemes
-    use {
-        "catppuccin/nvim",
-        "EdenEast/nightfox.nvim"
-    }
-
     -- sanity
     use {
         'machakann/vim-sandwich',
@@ -38,6 +32,13 @@ return require('packer').startup(function(use)
     }
 
     -- everything below is only for neovim
+
+    -- colorschemes
+    use {
+        "catppuccin/nvim",
+        "EdenEast/nightfox.nvim"
+    }
+
     use {
         "folke/which-key.nvim",
         config = function() require('plugins.which-key') end,
@@ -140,7 +141,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         config = function() require('plugins.lualine') end,
-        requires =  'kyazdani42/nvim-web-devicons' 
+        requires =  'kyazdani42/nvim-web-devicons'
     }
 
     -- tabs/buffers/windows
