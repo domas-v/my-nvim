@@ -17,6 +17,8 @@ map('n', 'k', '<Plug>(accelerated_jk_gk)', {})
 
 map('n', 's', '<Plug>Lightspeed_omni_s', {})
 map('n', 'gs', '<Plug>Lightspeed_omni_gs', {})
+map('v', 's', '<Plug>Lightspeed_omni_s', {})
+map('o', 'z', '<Plug>Lightspeed_omni_s', {})
 
 -- terminal
 map('t', '<C-w>h', '<C-\\><C-n><C-w>h', options)
