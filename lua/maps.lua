@@ -50,4 +50,3 @@ map('v', '>', '>gv', options)
  map('v', ';', ':', options)
 
  map('n', 'Y', 'y$', options)
- map('v', 'Y', 'y$', options)
