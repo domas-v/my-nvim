@@ -147,7 +147,6 @@ wk.register({
 wk.register({
     name = "Visual replace & clipboard copy",
     r = { ":s/", "Replace Visual" },
-    y = { '\"+y', "Copy selection to Clipboard" },
 }, { prefix = "<leader>", mode = "v"  })
 
 wk.register({
