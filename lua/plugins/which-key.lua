@@ -48,7 +48,6 @@ wk.register({
         p = { "<cmd>TroubleToggle<cr>", "Problems" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Symbols" },
         S = { "<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols" },
-        o = { "<cmd>SymbolsOutline<cr>", 'Outline' },
     },
 
     n = {

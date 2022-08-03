@@ -8,8 +8,11 @@ local silent_options = { noremap = true, silent = true }
 map('n', '<Space>', '', {})
 g.mapleader = ' '
 
--- search & replace
+-- search
 map('n', '<esc>', ':nohlsearch<cr>', silent_options)
+map('n', '<c-s>', '/', options)
+map('i', '<c-s>', '<esc>/', options)
+map('v', '<c-s>', '/', options)
 
 -- accelerated movement
 map('n', 'j', '<Plug>(accelerated_jk_gj)', {})
@@ -34,6 +37,10 @@ map('c', '<C-k>', '<LEFT>', options)
 map('c', '<C-j>', '<RIGHT>', options)
 map('t', '<C-x>', '<C-\\><C-N>', options)
 
-map('n', '<c-s>', '/', options)
-map('i', '<c-s>', '<esc>/', options)
-map('v', '<c-s>', '/', options)
+-- maintain selection after visual indent
+map('v', '<', '<gv', options)
+map('v', '>', '>gv', options)
+
+ -- Jump outside any parentheses or quotes:
+ map('i', 'jj', [[<Esc>/[)}"'\]>]<CR>:nohl<CR>a<right>]], options)
+ map('i', 'kk', [[<Esc>?[)}"'\]>]<CR>:nohl<CR>i<left>]], options)
