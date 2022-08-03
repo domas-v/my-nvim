@@ -1,5 +1,5 @@
 return require('packer').startup(function(use)
-    -- packer itself
+    -- packer
     use {
         'wbthomason/packer.nvim',
     }
