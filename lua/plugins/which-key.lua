@@ -12,6 +12,9 @@ wk.register({
         w = { "<cmd>set wrap!<cr>", "Word wrap" },
     },
 
+    -- tree
+    ["<TAB>"] = { "<cmd>NeoTreeFocusToggle<cr>", "Neotree" },
+
     -- file and buffer movement
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
     F = { "<cmd>Telescope file_browser<cr>", "Telescope file browser" },
@@ -19,6 +22,7 @@ wk.register({
     S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
     l = { "<cmd>Telescope buffers<cr>", "Buffers" },
     j = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
+    c = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
 
     -- terminal
     T = { "<cmd>ToggleTerm<cr>", "Toggle Terminal"},
@@ -41,20 +45,13 @@ wk.register({
     },
 
     -- code navigation
-    c = {
-        name = "Code",
+    n = {
+        name = "Code navigation",
         r = { "<cmd>Telescope lsp_references<cr>", "References" },
         d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
         p = { "<cmd>TroubleToggle<cr>", "Problems" },
         s = { "<cmd>Telescope lsp_document_symbols<cr>", "Symbols" },
         S = { "<cmd>Telescope lsp_workspace_symbols<cr>", "Workspace Symbols" },
-    },
-
-    n = {
-        name = "Neotree",
-        n = { "<cmd>NeoTreeFocusToggle<cr>", "Toggle"},
-        f = { "<cmd>NeoTreeFloatToggle<cr>", "Float Toggle" },
-        r = { "<cmd>NeoTreeReveal<cr>", "Reveal"},
     },
 
     G = { "<cmd>Neogit<cr>", "Git" },

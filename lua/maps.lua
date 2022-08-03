@@ -28,7 +28,6 @@ map('t', '<C-w>h', '<C-\\><C-n><C-w>h', options)
 map('t', '<C-w>j', '<C-\\><C-n><C-w>j', options)
 map('t', '<C-w>k', '<C-\\><C-n><C-w>k', options)
 map('t', '<C-w>l', '<C-\\><C-n><C-w>l', options)
--- map('t', '<leader><esc>', '<C-\\><C-n>', options)
 
 -- pop up movement
 map('i', '<C-j>', 'pumvisible() ? "\\<C-n>" : "\\<C-j>"', {expr = true, noremap = true})
@@ -44,3 +43,11 @@ map('v', '>', '>gv', options)
  -- Jump outside any parentheses or quotes:
  map('i', 'jj', [[<Esc>/[)}"'\]>]<CR>:nohl<CR>a<right>]], options)
  map('i', 'kk', [[<Esc>?[)}"'\]>]<CR>:nohl<CR>i<left>]], options)
+
+
+ -- more shortcuts
+ map('n', ';', ':', options)
+ map('v', ';', ':', options)
+
+ map('n', 'Y', 'y$', options)
+ map('v', 'Y', 'y$', options)
