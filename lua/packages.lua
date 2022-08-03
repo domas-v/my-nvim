@@ -13,7 +13,6 @@ return require('packer').startup(function(use)
 
     -- sanity
     use {
-        'machakann/vim-sandwich',
         'jiangmiao/auto-pairs',
         'rhysd/accelerated-jk',
         'RRethy/vim-illuminate',
@@ -23,15 +22,14 @@ return require('packer').startup(function(use)
         config = function() require('Comment').setup() end
     }
     use {
-        'gbprod/cutlass.nvim',
-        config = function() require('cutlass').setup({
-            cut_key = 'x',
-            exclude = { 'ns', 'nS' }
-        })
+        'kylechui/nvim-surround',
+        config = function() require("nvim-surround").setup({
+                move_cursor = false
+            })
         end
     }
 
-    -- everything below is only for neovim
+    -- EVERYTHING BELOW IS ONLY FOR NEOVIM --
 
     -- colorschemes
     use {
