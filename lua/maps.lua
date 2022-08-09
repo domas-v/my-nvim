@@ -14,10 +14,6 @@ map('n', '<c-s>', '/', options)
 map('i', '<c-s>', '<esc>/', options)
 map('v', '<c-s>', '/', options)
 
--- accelerated movement
-map('n', 'j', '<Plug>(accelerated_jk_gj)', {})
-map('n', 'k', '<Plug>(accelerated_jk_gk)', {})
-
 map('n', 's', '<Plug>Lightspeed_omni_s', {})
 map('n', 'gs', '<Plug>Lightspeed_omni_gs', {})
 map('v', 's', '<Plug>Lightspeed_omni_s', {})

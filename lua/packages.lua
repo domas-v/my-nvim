@@ -123,8 +123,12 @@ return require('packer').startup(function(use)
     }
 
     use {
-       'karb94/neoscroll.nvim',
-       config = function() require('plugins.neoscroll') end
+        'declancm/cinnamon.nvim',
+        config = function() require('cinnamon').setup({
+                extra_keymaps = true,
+                override_keymaps = true,
+                extendend_keymaps = true,
+            }) end
     }
     use {
         'lukas-reineke/indent-blankline.nvim',
