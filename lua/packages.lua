@@ -28,8 +28,25 @@ return require('packer').startup(function(use)
             })
         end
     }
+    use {
+        'lukas-reineke/indent-blankline.nvim',
+        config = function() require('plugins.indent-blankline') end
+    }
 
     -- EVERYTHING BELOW IS ONLY FOR NEOVIM --
+    use {
+        'declancm/cinnamon.nvim',
+        config = function() require('cinnamon').setup({
+                extra_keymaps = true,
+                override_keymaps = true,
+                extendend_keymaps = true,
+            }) end
+    }
+
+    use {
+        'mg979/vim-visual-multi',
+        branch = 'master',
+    }
 
     -- colorschemes
     use {
@@ -71,7 +88,7 @@ return require('packer').startup(function(use)
             'hrsh7th/cmp-cmdline',
             'onsails/lspkind-nvim',
             'ray-x/cmp-treesitter',
-            'github/copilot.vim',
+            -- 'github/copilot.vim',
         }
 
     -- problems
@@ -120,23 +137,6 @@ return require('packer').startup(function(use)
         "MunifTanjim/nui.nvim",
         },
         config = function() require('plugins.neotree') end,
-    }
-
-    use {
-        'declancm/cinnamon.nvim',
-        config = function() require('cinnamon').setup({
-                extra_keymaps = true,
-                override_keymaps = true,
-                extendend_keymaps = true,
-            }) end
-    }
-    use {
-        'lukas-reineke/indent-blankline.nvim',
-        config = function() require('plugins.indent-blankline') end
-    }
-    use {
-        'mg979/vim-visual-multi',
-        branch = 'master',
     }
 
     -- lualine
@@ -197,12 +197,6 @@ return require('packer').startup(function(use)
     --     "rcarriga/nvim-dap-ui",
     --     'theHamsta/nvim-dap-virtual-text',
     -- }
-
-    -- markdown
-    use {
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    }
 
     -- misc
     use {
