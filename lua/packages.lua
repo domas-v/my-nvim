@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
     use {
         'wbthomason/packer.nvim',
     }
+
     use {
         'ggandor/lightspeed.nvim',
         config = function () require('lightspeed').setup({
@@ -11,7 +12,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    -- sanity
     use {
         'jiangmiao/auto-pairs',
         'rhysd/accelerated-jk',
@@ -34,6 +34,7 @@ return require('packer').startup(function(use)
     }
 
     -- EVERYTHING BELOW IS ONLY FOR NEOVIM --
+    -- smooth scroll
     use {
         'declancm/cinnamon.nvim',
         config = function() require('cinnamon').setup({
@@ -48,7 +49,6 @@ return require('packer').startup(function(use)
         branch = 'master',
     }
 
-    -- colorschemes
     use {
         "catppuccin/nvim",
         "EdenEast/nightfox.nvim"
@@ -59,7 +59,6 @@ return require('packer').startup(function(use)
         config = function() require('plugins.which-key') end,
     }
 
-    -- autosave
     use {
         'Pocco81/auto-save.nvim',
         config = function() require("auto-save") end,
@@ -106,7 +105,9 @@ return require('packer').startup(function(use)
         opt = false,
         run = ':TSUpdateSync',
     }
-    use 'p00f/nvim-ts-rainbow'
+    use {
+        'p00f/nvim-ts-rainbow'
+    }
 
     -- telescope
     use {
