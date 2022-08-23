@@ -51,7 +51,6 @@ return require('packer').startup(function(use)
 
     use {
         "catppuccin/nvim",
-        "EdenEast/nightfox.nvim"
     }
 
     use {

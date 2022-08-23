@@ -110,19 +110,6 @@ require("catppuccin").setup({
 })
 vim.cmd [[colorscheme catppuccin]]
 
--- require('nightfox').setup({
---     options = {
---         styles = {
---           comments = "italic",
---           keywords = "bold",
---           types = "italic,bold",
---           functions = "italic",
---         }
---     }
--- })
---
--- cmd [[colorscheme nightfox]]
-
 -- tabs and spaces
 o.tabstop = 4
 o.expandtab = true
@@ -150,10 +137,6 @@ o.splitbelow = true
 o.splitright = true
 o.shiftround = true
 o.wrap = false
-
--- neovide settings
--- cmd [[set guifont=JetBrains\ Mono:h10]]
--- g['neovide_fullscreen'] = false
 
 -- bufferline
 g.bufferline = {
