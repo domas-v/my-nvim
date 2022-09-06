@@ -10,9 +10,14 @@ g.mapleader = ' '
 
 -- search
 map('n', '<esc>', ':nohlsearch<cr>', silent_options)
+
 map('n', '<c-s>', '/', options)
 map('i', '<c-s>', '<esc>/', options)
 map('v', '<c-s>', '/', options)
+
+map('n', '<c-s-s>', '?', options)
+map('i', '<c-s-s>', '<esc>?', options)
+map('v', '<c-s-s>', '?', options)
 
 map('n', 's', '<Plug>Lightspeed_omni_s', {})
 map('n', 'gs', '<Plug>Lightspeed_omni_gs', {})

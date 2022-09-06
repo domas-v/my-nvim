@@ -86,7 +86,6 @@ return require('packer').startup(function(use)
             'hrsh7th/cmp-cmdline',
             'onsails/lspkind-nvim',
             'ray-x/cmp-treesitter',
-            -- 'github/copilot.vim',
         }
 
     -- problems

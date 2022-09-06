@@ -4,12 +4,13 @@ wk.register({
     ["."] = { ":lcd %:p:h<cr>:pwd<cr>", "Change to current dir" },
     q = { "<cmd>q<cr>", "Close" },
     Q = { "<cmd>qa<cr>", "Close all" },
-    k = { "<cmd>WhichKey<cr>", "Keys" },
+    c = { ":", "Command Line" },
     [";"] = { "<cmd>Telescope commands<cr>", "Commands" },
     ["?"] = { "<cmd>Telescope help_tags<cr>", "Help" },
     ["<leader>"] = {
-        name = "Word wrap",
+        name = "Misc",
         w = { "<cmd>set wrap!<cr>", "Word wrap" },
+        k = { "<cmd>WhichKey<cr>", "Keys" },
     },
 
     -- tree
@@ -20,9 +21,9 @@ wk.register({
     F = { "<cmd>Telescope file_browser<cr>", "Telescope file browser" },
     s = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
     S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
-    l = { "<cmd>Telescope buffers<cr>", "Buffers" },
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
     j = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
-    c = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
+    y = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
 
     -- terminal
     T = { "<cmd>ToggleTerm<cr>", "Toggle Terminal"},
@@ -38,6 +39,7 @@ wk.register({
     },
 
     -- replace
+    R = { ":%s/", "Buffer Replace" },
     r = {
         name = "Replace",
         r = { ":%s/", "Buffer Replace" },
@@ -77,6 +79,8 @@ wk.register({
     },
 
     W = { "<cmd>BufferPick<cr>", "Pick buffer" },
+    l = { "<cmd>BufferNext<cr>", "Next" },
+    h = { "<cmd>BufferPrevious<cr>", "Previous" },
     w = {
         name = "Buffer/Window movement",
         n = { "<cmd>BufferNext<cr>", "Next" },
@@ -84,7 +88,7 @@ wk.register({
         v = { ":vert sb ", "Split vertical" },
         x = { ":sbuffer ", "Split horizontal" },
         o = { "<cmd>only<cr>", "Close other" },
-        s = { "<cmd>lua require('nvim-window').pick()<cr>", "Select window" },
+        w = { "<cmd>lua require('nvim-window').pick()<cr>", "Select window" },
         r = { "<cmd>WinResizerStartResize<cr>", "Resize window" },
         ["*"] = { "<cmd>BufferPin<cr>", "Pin" },
         ["]"] = { "<cmd>BufferMoveNext<cr>", "Move next" },
@@ -156,5 +160,9 @@ wk.register({
     ["<F12>"] = { '<cmd>lua require"dap".step_out()<cr>', 'Step out' },
 })
 
-wk.setup()
+wk.register({
+    name = "Splitting",
+    v = { "<cmd>vert sp % <cr>", "Split buffer vertically"  },
+    x = { "<cmd>sbuffer % <cr>", "Split buffer Horizontally"  }
+}, { prefix = "<C-w>", mode = "n" })
 
