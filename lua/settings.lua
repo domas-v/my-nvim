@@ -15,10 +15,17 @@ vim.g["python3_host_prog"] = "~/.venv/bin/python3"
 vim.g["loaded_ruby_provider"] = 0
 vim.g["loaded_perl_provider"] = 0
 
+-- neovide
+local is_neovide = vim.fn.exists("g:neovide")
+local transparency = true
+if is_neovide == 1 then
+    transparency = nil
+end
+
 -- colors
 vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 require("catppuccin").setup({
-	transparent_background = true,
+	transparent_background = transparency,
 	term_colors = false,
 	compile = {
 		enabled = false,

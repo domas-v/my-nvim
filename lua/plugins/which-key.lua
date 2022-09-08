@@ -21,8 +21,8 @@ wk.register({
     F = { "<cmd>Telescope file_browser<cr>", "Telescope file browser" },
     s = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
     S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
-    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-    j = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
+    l = { "<cmd>Telescope buffers<cr>", "Buffers" },
+    h = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
     y = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
 
     -- terminal
@@ -79,8 +79,8 @@ wk.register({
     },
 
     W = { "<cmd>BufferPick<cr>", "Pick buffer" },
-    l = { "<cmd>BufferNext<cr>", "Next" },
-    h = { "<cmd>BufferPrevious<cr>", "Previous" },
+    k = { "<cmd>BufferNext<cr>", "Next" },
+    j = { "<cmd>BufferPrevious<cr>", "Previous" },
     w = {
         name = "Buffer/Window movement",
         n = { "<cmd>BufferNext<cr>", "Next" },

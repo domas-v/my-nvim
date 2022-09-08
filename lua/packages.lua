@@ -186,6 +186,19 @@ return require('packer').startup(function(use)
         config = function() require('plugins.toggleterm') end
     }
 
+    -- search
+    use {
+        'kevinhwang91/nvim-hlslens',
+    }
+    use {
+        'kevinhwang91/nvim-bqf',
+        ft = 'qf',
+    }
+    use {
+        'junegunn/fzf',
+        run = function() vim.fn['fzf#install']() end
+    }
+
     -- debug
     -- use {
     --     "mfussenegger/nvim-dap",
