@@ -50,6 +50,9 @@ return require('packer').startup(function(use)
 
     use {
         "catppuccin/nvim",
+        'EdenEast/nightfox.nvim',
+        'monsonjeremy/onedark.nvim',
+        'folke/tokyonight.nvim'
     }
 
     use {
@@ -160,9 +163,7 @@ return require('packer').startup(function(use)
         'sindrets/winshift.nvim',
         config = function() require("winshift").setup() end
     }
-    use {
-        "simeji/winresizer"
-    }
+    use { "simeji/winresizer" }
 
     -- git
     use {
