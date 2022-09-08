@@ -107,7 +107,12 @@ require("telescope").setup {
                 -- disable zf filename match priority
                 match_filename = false,
             },
-        }
+        },
+        ["opener"] = {
+            hidden = false, -- do not show hidden directories
+            root_dir = "~", -- search from home directory by default
+            respect_gitignore = false, -- respect .gitignore files
+        },
     }
 }
 
@@ -115,3 +120,5 @@ require('telescope').load_extension('fzf')
 require('telescope').load_extension('neoclip')
 require('telescope').load_extension('file_browser')
 require('telescope').load_extension('zf-native')
+require('telescope').load_extension('zf-native')
+require('telescope').load_extension("opener")

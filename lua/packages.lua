@@ -125,6 +125,9 @@ return require('packer').startup(function(use)
         "nvim-telescope/telescope-file-browser.nvim",
         "natecraddock/telescope-zf-native.nvim"
     }
+    use {
+        "willthbill/opener.nvim"
+    }
 
     -- neotree
     use {

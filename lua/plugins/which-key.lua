@@ -4,7 +4,6 @@ wk.register({
     ["."] = { ":lcd %:p:h<cr>:pwd<cr>", "Change to current dir" },
     q = { "<cmd>q<cr>", "Close" },
     Q = { "<cmd>qa<cr>", "Close all" },
-    c = { ":", "Command Line" },
     [";"] = { "<cmd>Telescope commands<cr>", "Commands" },
     ["?"] = { "<cmd>Telescope help_tags<cr>", "Help" },
     ["<leader>"] = {
@@ -67,6 +66,13 @@ wk.register({
         u = { "<cmd>Gitsigns undo_stage_hunk<cr>", "Unstage hunk" },
         r = { "<cmd>Gitsigns reset_hunk<cr>", "Reset hunk" },
         b = { "<cmd>GitBlameToggle<cr>", "Blame Toggle" },
+    },
+
+    c = {
+        name = "Changes dirs and files",
+        c = { "<cmd>Telescope opener<cr>", "Open dir by selection" },
+        h = { "<cmd>Open ~<cr>", "Open home dir" },
+        n = { "<cmd>Open ~/Dropbox/Notes<cr>", "Open notes dir" },
     },
 
     e = {
