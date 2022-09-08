@@ -9,7 +9,9 @@ require('nvim-treesitter.configs').setup {
         "dockerfile",
         "json",
         "toml",
-        "yaml"
+        "yaml",
+        "markdown",
+        "markdown_inline"
     },
     highlight = {
         enable = true,
@@ -29,5 +31,6 @@ require('nvim-treesitter.configs').setup {
     rainbow = {
         enable = true,
         extended_mode = true
-    }
+    },
+    additional_vim_regex_highlighting = true,
 }
