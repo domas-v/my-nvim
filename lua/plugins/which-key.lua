@@ -155,6 +155,7 @@ wk.register({
     r = { ":s/", "Replace Visual" },
 }, { prefix = "<leader>", mode = "v"  })
 
+-- debug
 wk.register({
     name = "Debug",
     ["<F5>"] = { '<cmd>lua require"dap".continue()<cr>','Continue/Start debugger' },
@@ -166,8 +167,9 @@ wk.register({
     ["<F12>"] = { '<cmd>lua require"dap".step_out()<cr>', 'Step out' },
 })
 
+-- buffer splitting
 wk.register({
-    name = "Splitting",
+    name = "Buffer splitting",
     v = { "<cmd>vert sp % <cr>", "Split buffer vertically"  },
     x = { "<cmd>sbuffer % <cr>", "Split buffer Horizontally"  }
 }, { prefix = "<C-w>", mode = "n" })

@@ -14,7 +14,6 @@ return require('packer').startup(function(use)
 
     use {
         'jiangmiao/auto-pairs',
-        -- 'rhysd/accelerated-jk',  -- doesn't work with wrapped lines fix
         'RRethy/vim-illuminate',
     }
     use {

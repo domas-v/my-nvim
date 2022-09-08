@@ -96,7 +96,7 @@ require("catppuccin").setup({
 		barbar = true,
 		bufferline = true,
 		markdown = true,
-		lightspeed = true,
+		lightspeed = false,
 		ts_rainbow = true,
 		hop = false,
 		notify = false,
