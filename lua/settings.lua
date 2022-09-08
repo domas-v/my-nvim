@@ -124,6 +124,9 @@ wo.linebreak = true
 o.number = true
 
 -- random stuff
+wo.conceallevel = 2
+o.ignorecase = true
+o.smartcase = true
 o.mouse = "a"
 o.completeopt = "menuone,noselect"
 o.writebackup = false

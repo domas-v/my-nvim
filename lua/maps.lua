@@ -19,6 +19,7 @@ map('n', '<c-s-s>', '?', options)
 map('i', '<c-s-s>', '<esc>?', options)
 map('v', '<c-s-s>', '?', options)
 
+-- lightspeed
 map('n', 's', '<Plug>Lightspeed_omni_s', {})
 map('n', 'gs', '<Plug>Lightspeed_omni_gs', {})
 map('v', 's', '<Plug>Lightspeed_omni_s', {})
@@ -36,6 +37,12 @@ map('i', '<C-k>', 'pumvisible() ? "\\<C-p>" : "\\<C-k>"', {expr = true, noremap 
 map('c', '<C-k>', '<LEFT>', options)
 map('c', '<C-j>', '<RIGHT>', options)
 map('t', '<C-x>', '<C-\\><C-N>', options)
+
+-- wrapped line movement
+map ('n', 'k', 'gk', options)
+map ('n', 'j', 'gj', options)
+map ('n', '0', 'g0', options)
+map ('n', '$', 'g$', options)
 
 -- maintain selection after visual indent
 map('v', '<', '<gv', options)
