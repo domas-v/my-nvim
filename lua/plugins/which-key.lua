@@ -1,5 +1,26 @@
 local wk = require("which-key")
 
+local map = vim.api.nvim_set_keymap
+local g = vim.g
+
+-- leader
+map('n', '<Space>', '', {})
+g.mapleader = ' '
+
+-- pop up movement
+map('i', '<C-j>', 'pumvisible() ? "\\<C-n>" : "\\<C-j>"', {expr = true, noremap = true})
+map('i', '<C-k>', 'pumvisible() ? "\\<C-p>" : "\\<C-k>"', {expr = true, noremap = true})
+map('c', '<C-j>', '<LEFT>', { noremap = true })
+map('c', '<C-k>', '<RIGHT>', { noremap = true })
+map('t', '<C-x>', '<C-\\><C-N>', { noremap = true })
+
+--terminal 
+map('t', '<C-w>h', '<C-\\><C-n><C-w>h', { noremap = true })
+map('t', '<C-w>j', '<C-\\><C-n><C-w>j', { noremap = true })
+map('t', '<C-w>k', '<C-\\><C-n><C-w>k', { noremap = true })
+map('t', '<C-w>l', '<C-\\><C-n><C-w>l', { noremap = true })
+
+-- leader keys
 wk.register({
     ["."] = { ":lcd %:p:h<cr>:pwd<cr>", "Change to current dir" },
     q = { "<cmd>q<cr>", "Close" },
@@ -150,10 +171,49 @@ wk.register({
 
 }, { prefix = "<leader>" })
 
+-- search & replace in visual mode
 wk.register({
     name = "Visual replace & clipboard copy",
     r = { ":s/", "Replace Visual" },
-}, { prefix = "<leader>", mode = "v"  })
+}, { prefix = "<leader>", mode = "v" })
+
+-- visual mode maps
+wk.register({
+    ['<c-s>'] = { '/', 'Incremental search' },
+    ['<c-s-s>'] = { '?', 'Backward incremental search' },
+    ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
+    ['<'] = { '<gv', 'Maintain selection after visual indent' },
+    ['>'] = { '>gv', 'Maintain selection after visual indent' },
+    [';'] = { ':', "Command mode" },
+}, { mode = "v" })
+
+-- normal mode maps
+wk.register({
+    ['<esc>'] = { ':nohlsearch<cr>', 'Remove search highlighting' },
+    ['<c-s>'] = { '/', 'Incremental search' },
+    ['<c-s-s>'] = { '?', 'Backward incremental search' },
+    ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
+    ['gs'] = { '<Plug>Lightspeed_omni_gs', 'Lightspeed multi buffer' },
+
+    -- wrapped line movement
+    k = {'gk', 'Up line'},
+    j = {'gj', 'Down line'},
+    ['0'] = { 'g0', 'First line char' },
+    ['$'] = { 'g$', 'Last line line' },
+    Y = { 'y$', "Yank from cursor till end of line" },
+    [';'] = { ':', 'Command mode' }
+})
+
+-- insert mode maps
+wk.register({
+    ['<c-s>'] = { '<esc>/', 'Incremental search' },
+    ['<c-s-s>'] = { '<esc>?', 'Backwarnd incremental search' },
+}, { mode = "i" })
+
+
+wk.register({
+    z = { '<Plug>Lightspeed_omni_s', 'Lightspeed in operator pending mode' }
+}, { mode = "o" })
 
 -- debug
 wk.register({
