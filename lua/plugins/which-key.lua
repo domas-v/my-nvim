@@ -43,7 +43,8 @@ wk.register({
     S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
     l = { "<cmd>Telescope buffers<cr>", "Buffers" },
     h = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
-    y = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
+    y = { "<cmd>Telescope Neoclip<cr>", "Neoclip" },
+    r = { "<cmd>Telescope Neoclip<cr>", "Neoclip" },
 
     -- terminal
     T = { "<cmd>ToggleTerm<cr>", "Toggle Terminal"},
@@ -60,11 +61,6 @@ wk.register({
 
     -- replace
     R = { ":%s/", "Buffer Replace" },
-    r = {
-        name = "Replace",
-        r = { ":%s/", "Buffer Replace" },
-        l = { ":s/", "Line Replace" },
-    },
 
     -- code navigation
     n = {
@@ -98,11 +94,12 @@ wk.register({
 
     e = {
         name = "Files",
-        e = { ":e ", "Open file" },
+        e = { "<cmd>e ", "Open file" },
         f = { "<cmd>w<cr>", "Save current file" },
+        n = { "<cmd>OpenNotes<cr>", "Open notes" },
         c = { "<cmd>OpenConfig<cr>", "Open config" },
-        v = { ":vert sp ", "Split vertical" },
-        x = { ":sp ", "Split horizontal" },
+        v = { "<cmd>vert sp ", "Split vertical" },
+        x = { "<cmd>sp ", "Split horizontal" },
     },
 
     W = { "<cmd>BufferPick<cr>", "Pick buffer" },
@@ -154,7 +151,7 @@ wk.register({
     },
 
     M = { "<cmd>tab sp<cr>", "Maximise current window" },
-    m = {
+    ["<leader>m"] = {
         name = "Tabs",
         m = { "<cmd>tabnew<cr>", "New tab" },
         c = { "<cmd>tabclose<cr>", "Close tab" },

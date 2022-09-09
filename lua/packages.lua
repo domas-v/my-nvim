@@ -36,7 +36,6 @@ return require('packer').startup(function(use)
     -- smooth scroll
     -- TODO: Add other apps (firenvim, etc)
     if not (vim.fn.exists("g:vscode") ~= 0) then
-	print("ASDASD")
         use {
             'declancm/cinnamon.nvim',
             config = function() require('cinnamon').setup({
@@ -224,20 +223,11 @@ return require('packer').startup(function(use)
             -- }
 
         -- note taking
-        use { 'jakewvincent/mkdnflow.nvim',
-        rocks = 'luautf8', -- for prettier todo states
-        config = function()
-            -- TODO: move to separate file
-            -- TODO: set perspective
-            -- TODO: override default mappings (they're pretty good, but <leader> mappings need to be changed)
-            require('mkdnflow').setup({
-                modules = {
-                    mappings = false
-                },
-                perspective = {
-                }
-            })
-        end }
+        use {
+            'jakewvincent/mkdnflow.nvim',
+            rocks = 'luautf8', -- for prettier todo states
+            config = function() require('plugins.mkdnflow') end,
+        }
 
         -- misc
         use {

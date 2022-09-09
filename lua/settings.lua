@@ -18,7 +18,7 @@ vim.g["loaded_perl_provider"] = 0
 -- colors
 require('colorschemes.tokyonight_config')
 require('colorschemes.catppuccin_config')
-vim.cmd [[colorscheme catppuccin]]
+vim.cmd [[colorscheme tokyonight]]
 
 -- tabs and spaces
 o.tabstop = 4
