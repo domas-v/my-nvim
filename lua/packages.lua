@@ -63,8 +63,8 @@ return require('packer').startup(function(use)
         }
 
         use {
-            'Pocco81/auto-save.nvim',
-            config = function() require("auto-save") end,
+            'nvim-zh/auto-save.nvim',
+            config = function() require("auto-save").setup() end,
         }
 
         -- lsp
@@ -208,7 +208,7 @@ return require('packer').startup(function(use)
         use {
             "folke/todo-comments.nvim",
             requires = "nvim-lua/plenary.nvim",
-            config = function() require("todo-comments").setup() end
+            config = function() require("todo-comments").setup() end,
         }
         -- TODO: setup debug
         -- use {
