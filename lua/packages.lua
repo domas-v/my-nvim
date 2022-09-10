@@ -204,6 +204,12 @@ return require('packer').startup(function(use)
             run = function() vim.fn['fzf#install']() end
         }
 
+        -- outline
+        use {
+            'simrat39/symbols-outline.nvim',
+            config = function() require("symbols-outline").setup() end
+        }
+
         -- debug
         use {
             "folke/todo-comments.nvim",
@@ -228,10 +234,27 @@ return require('packer').startup(function(use)
             rocks = 'luautf8', -- for prettier todo states
             config = function() require('plugins.mkdnflow') end,
         }
+        use {
+            'jbyuki/nabla.nvim',
+            config = function() require('nabla').enable_virt() end
+        }
+        use{
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
+        }
+        use {
+            "iamcco/markdown-preview.nvim",
+            run = "cd app && npm install",
+            ft = { "markdown" },
+            setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+        }
+        use {
+            "michaelb/sniprun",
+            run = 'bash ./install.sh'
+        }
+
 
         -- misc
-        use {
-            'dstein64/vim-startuptime',
-        }
+        use { 'dstein64/vim-startuptime' }
     end
 end)
