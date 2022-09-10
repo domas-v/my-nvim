@@ -43,8 +43,8 @@ wk.register({
     S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
     l = { "<cmd>Telescope buffers<cr>", "Buffers" },
     h = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
-    y = { "<cmd>Telescope Neoclip<cr>", "Neoclip" },
-    r = { "<cmd>Telescope Neoclip<cr>", "Neoclip" },
+    y = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
+    r = { "<cmd>Telescope registers<cr>", "Neoclip" },
 
     -- terminal
     T = { "<cmd>ToggleTerm<cr>", "Toggle Terminal"},
@@ -63,6 +63,7 @@ wk.register({
     R = { ":%s/", "Buffer Replace" },
 
     -- code navigation
+    o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" },
     n = {
         name = "Code navigation",
         r = { "<cmd>Telescope lsp_references<cr>", "References" },
@@ -145,9 +146,17 @@ wk.register({
         x = { "<cmd>BufferClose<cr>", "Delete and don't close window" },
         f = { ":bd ", "Delete by searching" },
         o = { "<cmd>BufferCloseAllButCurrent<cr>", "Delete all but current" },
-        h = { "<cmd>BufferCloseBuffersLeft<cr>", "Delete buffers left" },
-        l = { "<cmd>BufferCloseBuffersRight<cr>", "Delete buffers right" },
+        j = { "<cmd>BufferCloseBuffersLeft<cr>", "Delete buffers left" },
+        k = { "<cmd>BufferCloseBuffersRight<cr>", "Delete buffers right" },
         ["*"] = { "<cmd>BufferCloseAllButPinned<cr>", "Delete all but pinned" },
+    },
+
+    m = {
+        name = "Note taking",
+        m = { "<cmd> lua require('nabla').popup()<cr>", "Math popup" },
+        e = { "<cmd> lua require('nabla').enable_virt()<cr>", "Enable virtual text" },
+        d = { "<cmd> lua require('nabla').disable_virt()<cr>", "Disable virtual text" },
+        p = { "<cmd> MarkdownPreview<cr>", "Markdown preview" }
     },
 
     M = { "<cmd>tab sp<cr>", "Maximise current window" },

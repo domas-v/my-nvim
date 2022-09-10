@@ -11,7 +11,7 @@ cmd [[set clipboard+=unnamedplus]]
 cmd [[set signcolumn=yes:1]]
 
 -- providers
-vim.g["python3_host_prog"] = "~/.venv/bin/python3"
+vim.g["python3_host_prog"] = "~/venv/bin/python"
 vim.g["loaded_ruby_provider"] = 0
 vim.g["loaded_perl_provider"] = 0
 

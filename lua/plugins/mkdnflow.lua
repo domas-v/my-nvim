@@ -11,7 +11,7 @@ require('mkdnflow').setup({
         implicit_extension = nil,
         transform_implicit = false,
         transform_explicit = function(text)
-            -- text = text:gsub(" ", " ")
+            text = text:gsub(" ", "-")
             return(text)
         end
     },
