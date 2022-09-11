@@ -31,7 +31,7 @@ wk.register({
         name = "Misc",
         w = { "<cmd>set wrap!<cr>", "Word wrap" },
         k = { "<cmd>WhichKey<cr>", "Keys" },
-        t = { "<cmd>TodoTelscope<cr>", "Todo comments" },
+        t = { "<cmd>TodoTelescope<cr>", "Todo comments" },
         j = { "<cmd>Telescope jumplist<cr>", "Jump List" },
     },
 
