@@ -29,7 +29,8 @@ cmp.setup({
         { name = 'buffer' },
         { name = 'vsnip' },
         { name = 'nvim_lsp_signature_help' },
-        { name = 'treesitter' }
+        { name = 'treesitter' },
+        { name = 'path' }
     }),
     formatting = {
         format = lspkind.cmp_format({

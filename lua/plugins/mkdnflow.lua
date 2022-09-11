@@ -16,11 +16,11 @@ require('mkdnflow').setup({
         end
     },
     to_do = {
-        symbols = {' ', '', ''},
+        symbols = {'', '', ''},
         update_parents = true,
-        not_started = ' ',
-        in_progress = '',
-        complete = ''
+        -- not_started = '',
+        -- in_progress = '',
+        -- complete = ''
     },
     mappings = {
         MkdnTagSpan = {'v', '<M-CR>'},

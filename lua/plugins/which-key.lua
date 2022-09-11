@@ -31,9 +31,11 @@ wk.register({
         name = "Misc",
         w = { "<cmd>set wrap!<cr>", "Word wrap" },
         k = { "<cmd>WhichKey<cr>", "Keys" },
+        t = { "<cmd>TodoTelscope<cr>", "Todo comments" },
+        j = { "<cmd>Telescope jumplist<cr>", "Jump List" },
     },
 
-    -- tree
+    -- file tree
     ["<TAB>"] = { "<cmd>NeoTreeFocusToggle<cr>", "Neotree" },
 
     -- file and buffer movement
@@ -42,9 +44,8 @@ wk.register({
     s = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
     S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
     l = { "<cmd>Telescope buffers<cr>", "Buffers" },
-    h = { "<cmd>Telescope jumplist<cr>", "Jumplist" },
     y = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
-    r = { "<cmd>Telescope registers<cr>", "Neoclip" },
+    r = { "<cmd>Telescope registers<cr>", "Registers" },
 
     -- terminal
     T = { "<cmd>ToggleTerm<cr>", "Toggle Terminal"},
@@ -95,7 +96,7 @@ wk.register({
 
     e = {
         name = "Files",
-        e = { "<cmd>e ", "Open file" },
+        e = { "<cmd>e<cr>", "Open file" },
         f = { "<cmd>w<cr>", "Save current file" },
         n = { "<cmd>OpenNotes<cr>", "Open notes" },
         c = { "<cmd>OpenConfig<cr>", "Open config" },
