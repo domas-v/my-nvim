@@ -33,6 +33,7 @@ wk.register({
         k = { "<cmd>WhichKey<cr>", "Keys" },
         t = { "<cmd>TodoTelescope<cr>", "Todo comments" },
         j = { "<cmd>Telescope jumplist<cr>", "Jump List" },
+        z = { "<cmd>TZAtaraxis<cr>", "Toggle zen mode" },
     },
 
     -- file tree

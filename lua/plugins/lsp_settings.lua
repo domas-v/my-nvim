@@ -41,6 +41,7 @@ cmp.setup({
                 treesitter = "[Tree]",
                 vsnip = "[VSnip]",
                 nvim_lua = "[Lua]",
+                path = "[Path]",
             })
     })
   }
@@ -85,36 +86,19 @@ local on_attach = function(client, bufnr)
     require('illuminate').on_attach(client)
 end
 
-lsp.pyright.setup({
-    on_attach=on_attach,
-    capabilities=capabilities})
-lsp.jedi_language_server.setup({
-    on_attach=on_attach,
-    capabilities=capabilities,
-})
-lsp.gopls.setup({
-    on_attach=on_attach,
-    capabilities=capabilities,
-})
-lsp.dockerls.setup({
+local lsp_settings = {
     on_attach=on_attach,
     capabilities=capabilities
-})
-lsp.vimls.setup({
-    on_attach=on_attach,
-    capabilities=capabilities
-})
-lsp.bashls.setup({
-    on_attach=on_attach,
-    capabilities=capabilities})
-lsp.terraformls.setup({
-    on_attach=on_attach,
-    capabilities=capabilities
-})
-lsp.rust_analyzer.setup({
-    on_attach = on_attach,
-    capabilities=capabilities
-})
+}
+
+lsp.pyright.setup(lsp_settings)
+lsp.jedi_language_server.setup(lsp_settings)
+lsp.gopls.setup(lsp_settings)
+lsp.dockerls.setup(lsp_settings)
+lsp.vimls.setup(lsp_settings)
+lsp.bashls.setup(lsp_settings)
+lsp.terraformls.setup(lsp_settings)
+lsp.rust_analyzer.setup(lsp_settings)
 lsp.sumneko_lua.setup({
     on_attach=on_attach,
     capabilities=capabilities,
@@ -140,6 +124,7 @@ lsp.sumneko_lua.setup({
     },
 })
 
+-- TODO: fix here with the mason.nvim
 local null_ls = require('null-ls')
 local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({

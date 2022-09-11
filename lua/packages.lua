@@ -238,16 +238,20 @@ return require('packer').startup(function(use)
             'jbyuki/nabla.nvim',
             config = function() require('nabla').enable_virt() end
         }
-        use{
+        use {
             "iamcco/markdown-preview.nvim",
             run = function() vim.fn["mkdp#util#install"]() end,
         }
         use {
-            "iamcco/markdown-preview.nvim",
-            run = "cd app && npm install",
-            ft = { "markdown" },
-            setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+            "Pocco81/true-zen.nvim",
+            config = function() require("true-zen").setup({
+                integrations = {
+                    lualine = true
+                }
+            }) end,
         }
+
+        -- TODO: configure this
         use {
             "michaelb/sniprun",
             run = 'bash ./install.sh'
