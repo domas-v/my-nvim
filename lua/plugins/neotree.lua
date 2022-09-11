@@ -9,8 +9,6 @@ vim.fn.sign_define("DiagnosticSignInfo",
   {text = " ", texthl = "DiagnosticSignInfo"})
 vim.fn.sign_define("DiagnosticSignHint",
   {text = "", texthl = "DiagnosticSignHint"})
--- NOTE: this is changed from v1.x, which used the old style of highlight groups
--- in the form "LspDiagnosticsSignWarning"
 
 require("neo-tree").setup({
   close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab

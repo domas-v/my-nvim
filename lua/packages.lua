@@ -221,7 +221,6 @@ return require('packer').startup(function(use)
             -- "mfussenegger/nvim-dap",
             -- config = function() require('plugins.debugger') end
             -- }
-
         -- use {
             -- 'mfussenegger/nvim-dap-python',
             -- "rcarriga/nvim-dap-ui",
@@ -250,7 +249,6 @@ return require('packer').startup(function(use)
                 }
             }) end,
         }
-
         -- TODO: configure this
         use {
             "michaelb/sniprun",
