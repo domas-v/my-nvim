@@ -44,10 +44,6 @@ o.cmdheight = 1
 o.foldlevelstart = 2
 o.showmatch = true  -- show bracket macthing
 
--- spelling
-o.spell = true
-o.spelllang = { 'en_us' }
-
 -- search case
 o.ignorecase = true
 o.smartcase = true
