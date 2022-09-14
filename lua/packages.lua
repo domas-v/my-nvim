@@ -34,8 +34,7 @@ return require('packer').startup(function(use)
 
     -- EVERYTHING BELOW IS ONLY FOR NEOVIM --
     -- smooth scroll
-    -- TODO: Add other apps (firenvim, etc)
-    if not (vim.fn.exists("g:vscode") ~= 0) then
+    if (vim.fn.has("nvim") == 1) then
         use {
             'declancm/cinnamon.nvim',
             config = function() require('cinnamon').setup({
@@ -128,9 +127,6 @@ return require('packer').startup(function(use)
         use {
             "nvim-telescope/telescope-file-browser.nvim",
             "natecraddock/telescope-zf-native.nvim"
-        }
-        use {
-            "willthbill/opener.nvim"
         }
 
         -- neotree
@@ -228,18 +224,24 @@ return require('packer').startup(function(use)
             -- }
 
         -- note taking
-        use {
-            'jakewvincent/mkdnflow.nvim',
-            rocks = 'luautf8', -- for prettier todo states
-            config = function() require('plugins.mkdnflow') end,
-        }
+        -- use {
+        --     "epwalsh/obsidian.nvim",
+        --     requires = {
+        --         "nvim-lua/plenary.nvim",
+        --         "hrsh7th/nvim-cmp"
+        --     },
+        --     config = function ()
+        --         require("obsidian").setup({
+        --             dir = "~/Dropbox/Notes",
+        --             completion = {
+        --                 nvim_cmp = true,
+        --             }
+        --         })
+        --     end
+        -- }
         use {
             'jbyuki/nabla.nvim',
             config = function() require('nabla').enable_virt() end
-        }
-        use {
-            "iamcco/markdown-preview.nvim",
-            run = function() vim.fn["mkdp#util#install"]() end,
         }
         use {
             "Pocco81/true-zen.nvim",
@@ -254,7 +256,6 @@ return require('packer').startup(function(use)
             "michaelb/sniprun",
             run = 'bash ./install.sh'
         }
-
 
         -- misc
         use { 'dstein64/vim-startuptime' }
