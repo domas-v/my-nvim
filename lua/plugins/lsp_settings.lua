@@ -41,7 +41,6 @@ cmp.setup({
                 treesitter = "[Tree]",
                 vsnip = "[VSnip]",
                 nvim_lua = "[Lua]",
-                path = "[Path]",
             })
     })
   }

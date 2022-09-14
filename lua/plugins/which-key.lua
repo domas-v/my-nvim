@@ -88,13 +88,6 @@ wk.register({
         b = { "<cmd>GitBlameToggle<cr>", "Blame Toggle" },
     },
 
-    c = {
-        name = "Changes dirs and files",
-        c = { "<cmd>Telescope opener<cr>", "Open dir by selection" },
-        h = { "<cmd>Open ~<cr>", "Open home dir" },
-        n = { "<cmd>Open ~/Dropbox/Notes<cr>", "Open notes dir" },
-    },
-
     e = {
         name = "Files",
         e = { "<cmd>e<cr>", "Open file" },
