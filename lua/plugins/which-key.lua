@@ -148,24 +148,24 @@ wk.register({
 
     m = {
         name = "Note taking",
-        m = { "<cmd> lua require('nabla').popup()<cr>", "Math popup" },
+        M = { "<cmd> lua require('nabla').popup()<cr>", "Math popup" },
         e = { "<cmd> lua require('nabla').enable_virt()<cr>", "Enable virtual text" },
         d = { "<cmd> lua require('nabla').disable_virt()<cr>", "Disable virtual text" },
-        p = { "<cmd> MarkdownPreview<cr>", "Markdown preview" }
+        p = { "<cmd> MarkdownPreview<cr>", "Markdown preview" },
     },
 
     M = { "<cmd>tab sp<cr>", "Maximise current window" },
-    ["<leader>m"] = {
-        name = "Tabs",
-        m = { "<cmd>tabnew<cr>", "New tab" },
-        c = { "<cmd>tabclose<cr>", "Close tab" },
-        o = { "<cmd>tabonly<cr>", "Close all but current" },
-        ["1"] = { "<cmd> tabn 1<cr>", "Go to 1"},
-        ["2"] = { "<cmd> tabn 2<cr>", "Go to 2"},
-        ["3"] = { "<cmd> tabn 3<cr>", "Go to 3"},
-        ["4"] = { "<cmd> tabn 4<cr>", "Go to 4"},
-        ["5"] = { "<cmd> tabn 5<cr>", "Go to 5"},
-    },
+    -- m = {
+    --     name = "Tabs",
+    --     m = { "<cmd>tabnew<cr>", "New tab" },
+    --     c = { "<cmd>tabclose<cr>", "Close tab" },
+    --     o = { "<cmd>tabonly<cr>", "Close all but current" },
+    --     ["1"] = { "<cmd> tabn 1<cr>", "Go to 1"},
+    --     ["2"] = { "<cmd> tabn 2<cr>", "Go to 2"},
+    --     ["3"] = { "<cmd> tabn 3<cr>", "Go to 3"},
+    --     ["4"] = { "<cmd> tabn 4<cr>", "Go to 4"},
+    --     ["5"] = { "<cmd> tabn 5<cr>", "Go to 5"},
+    -- },
 
     -- this is set in lsp settings
     d = { name = "Diagnostics" }

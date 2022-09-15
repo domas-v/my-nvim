@@ -14,7 +14,7 @@ vim.api.nvim_create_user_command(
 vim.api.nvim_create_user_command(
     'OpenNotes',
     function()
-        cmd ':e ~/Dropbox/Notes/index.md'
+        cmd ':e ~/Dropbox/Notes/Inbox.md'
         cmd ':lcd %:p:h'
         print('Changed dir to ' .. vim.api.nvim_buf_get_name(0))
     end,

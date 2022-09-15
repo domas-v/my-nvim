@@ -72,10 +72,6 @@ return require('packer').startup(function(use)
             config = function() require('plugins.lsp_settings') end
         }
         use { "jose-elias-alvarez/null-ls.nvim" }
-        use {
-            "williamboman/mason.nvim",
-            config = function() require("mason").setup() end
-        }
 
         -- completion
         use {
@@ -224,32 +220,22 @@ return require('packer').startup(function(use)
             -- }
 
         -- note taking
-        -- use {
-        --     "epwalsh/obsidian.nvim",
-        --     requires = {
-        --         "nvim-lua/plenary.nvim",
-        --         "hrsh7th/nvim-cmp"
-        --     },
-        --     config = function ()
-        --         require("obsidian").setup({
-        --             dir = "~/Dropbox/Notes",
-        --             completion = {
-        --                 nvim_cmp = true,
-        --             }
-        --         })
-        --     end
-        -- }
+        use {
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
+        }
+        use {
+            'jakewvincent/mkdnflow.nvim',
+            rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+            config = function() require('plugins.mkdnflow') end
+        }
         use {
             'jbyuki/nabla.nvim',
             config = function() require('nabla').enable_virt() end
         }
         use {
-            "Pocco81/true-zen.nvim",
-            config = function() require("true-zen").setup({
-                integrations = {
-                    lualine = true
-                }
-            }) end,
+            "loqusion/true-zen.nvim",
+            config = function() require("true-zen").setup() end
         }
         -- TODO: configure this
         use {
