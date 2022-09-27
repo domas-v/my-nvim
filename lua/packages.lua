@@ -53,7 +53,8 @@ return require('packer').startup(function(use)
             "catppuccin/nvim",
             'EdenEast/nightfox.nvim',
             'monsonjeremy/onedark.nvim',
-            'folke/tokyonight.nvim'
+            'folke/tokyonight.nvim',
+            "sainnhe/everforest"
         }
 
         use {
@@ -133,8 +134,12 @@ return require('packer').startup(function(use)
                 "nvim-lua/plenary.nvim",
                 "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
                 "MunifTanjim/nui.nvim",
+                "s1n7ax/nvim-window-picker"
             },
-            config = function() require('plugins.neotree') end,
+            config = function()
+                require('plugins.neotree')
+                require('window-picker').setup()
+            end,
         }
 
         -- lualine
@@ -189,10 +194,9 @@ return require('packer').startup(function(use)
         }
         use {
             'kevinhwang91/nvim-bqf',
-            ft = 'qf',
-        }
-        use {
             'junegunn/fzf',
+            "gabrielpoca/replacer.nvim",
+            ft = 'qf',
             run = function() vim.fn['fzf#install']() end
         }
 
@@ -208,26 +212,26 @@ return require('packer').startup(function(use)
             requires = "nvim-lua/plenary.nvim",
             config = function() require("todo-comments").setup() end,
         }
-        -- TODO: setup debug
-        -- use {
-            -- "mfussenegger/nvim-dap",
-            -- config = function() require('plugins.debugger') end
-            -- }
-        -- use {
-            -- 'mfussenegger/nvim-dap-python',
-            -- "rcarriga/nvim-dap-ui",
-            -- 'theHamsta/nvim-dap-virtual-text',
-            -- }
+        use {
+            "mfussenegger/nvim-dap",
+            requires = {
+                "mfussenegger/nvim-dap-python",
+                "rcarriga/nvim-dap-ui",
+                "theHamsta/nvim-dap-virtual-text",
+                "rcarriga/cmp-dap",
+            },
+            config = function() require("plugins.debugger") end
+        }
 
         -- note taking
-        use {
-            "iamcco/markdown-preview.nvim",
-            run = function() vim.fn["mkdp#util#install"]() end,
-        }
         use {
             'jakewvincent/mkdnflow.nvim',
             rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
             config = function() require('plugins.mkdnflow') end
+        }
+        use {
+            "iamcco/markdown-preview.nvim",
+            run = function() vim.fn["mkdp#util#install"]() end,
         }
         use {
             'jbyuki/nabla.nvim',
@@ -237,7 +241,6 @@ return require('packer').startup(function(use)
             "loqusion/true-zen.nvim",
             config = function() require("true-zen").setup() end
         }
-        -- TODO: configure this
         use {
             "michaelb/sniprun",
             run = 'bash ./install.sh'

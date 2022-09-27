@@ -5,6 +5,10 @@ local lspkind = require('lspkind')
 
 -- CMP setup
 cmp.setup({
+    enabled = function()
+        return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
+        or require("cmp_dap").is_dap_buffer()
+    end,
     snippet = {
         expand = function(args)
             vim.fn["vsnip#anonymous"](args.body)
@@ -30,7 +34,8 @@ cmp.setup({
         { name = 'vsnip' },
         { name = 'nvim_lsp_signature_help' },
         { name = 'treesitter' },
-        { name = 'path' }
+        { name = 'path' },
+        { name = 'dap' }
     }),
     formatting = {
         format = lspkind.cmp_format({
@@ -42,8 +47,8 @@ cmp.setup({
                 vsnip = "[VSnip]",
                 nvim_lua = "[Lua]",
             })
-    })
-  }
+        })
+    }
 })
 
 cmp.setup.cmdline('/', {
@@ -123,7 +128,6 @@ lsp.sumneko_lua.setup({
     },
 })
 
--- TODO: fix here with the mason.nvim
 local null_ls = require('null-ls')
 local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({

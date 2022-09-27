@@ -8,7 +8,7 @@ require('mkdnflow').setup({
     links = {
         style = 'markdown',
         conceal = false,
-        implicit_extension = nil,
+        implicit_extension = ".md",
         transform_implicit = false,
         transform_explicit = function(text)
             text = text:gsub(" ", "-")
@@ -16,7 +16,7 @@ require('mkdnflow').setup({
         end
     },
     to_do = {
-        symbols = {' ', '', ''},
+        symbols = {' ', 'X'},
         update_parents = true,
     },
     tables = {

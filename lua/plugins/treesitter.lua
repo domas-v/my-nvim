@@ -1,5 +1,4 @@
 require('nvim-treesitter.configs').setup {
-    -- ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = {
         "python",
         "lua",
@@ -11,10 +10,11 @@ require('nvim-treesitter.configs').setup {
         "toml",
         "yaml",
         "markdown",
-        "markdown_inline"
+        "markdown_inline",
     },
     highlight = {
         enable = true,
+        additional_vim_regex_highlighting = { "markdown", },
     },
     incremental_selection = {
         enable = true,
@@ -32,5 +32,4 @@ require('nvim-treesitter.configs').setup {
         enable = true,
         extended_mode = true
     },
-    additional_vim_regex_highlighting = true,
 }

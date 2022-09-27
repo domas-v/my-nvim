@@ -10,7 +10,7 @@ cmd [[set clipboard+=unnamedplus]]
 cmd [[set signcolumn=yes:1]]
 
 -- providers
-vim.g["python3_host_prog"] = "~/venv/bin/python"
+vim.g["python3_host_prog"] = "~/.pyenv/shims/python"
 vim.g["loaded_ruby_provider"] = 0
 vim.g["loaded_perl_provider"] = 0
 
@@ -39,7 +39,7 @@ wo.conceallevel = 2
 o.splitbelow = true
 o.splitright = true
 o.shiftround = true
-o.wrap = false
+o.wrap = true
 o.cmdheight = 1
 o.foldlevelstart = 2
 o.showmatch = true  -- show bracket macthing

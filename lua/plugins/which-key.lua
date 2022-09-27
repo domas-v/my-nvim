@@ -167,8 +167,16 @@ wk.register({
     --     ["5"] = { "<cmd> tabn 5<cr>", "Go to 5"},
     -- },
 
-    -- this is set in lsp settings
-    d = { name = "Diagnostics" }
+    d = {
+        -- ignore a,n,p,v - used for diagnostics
+        name = "Diagnostics & debug",
+        u = { "<cmd>lua require('dapui').toggle()<cr>" ,"DAP UI" },
+        r = { "<cmd>lua require('dap').repl.toggle()<cr>" ,"DAP Toggle REPL" },
+        t = { "<cmd>DapVirtualTextToggle<cr>", "DAP Virtual text toggle" },
+        e = { "<cmd>lua require('dapui').eval()<cr>", "DAP Virtual text toggle" },
+        f = { "<cmd>lua require('dapui').float_element()<cr>", "DAP float element" },
+        R = { "<cmd>DapVirtualTextForceRefresh<cr>", "DAP Virtual text refresh" },
+    }
 
 }, { prefix = "<leader>" })
 
@@ -186,6 +194,7 @@ wk.register({
     ['<'] = { '<gv', 'Maintain selection after visual indent' },
     ['>'] = { '>gv', 'Maintain selection after visual indent' },
     [';'] = { ':', "Command mode" },
+    ["<leader>de"] = { "<cmd>lua require('dapui').eval()<cr>", "DAP eval" }
 }, { mode = "v" })
 
 -- normal mode maps
@@ -194,7 +203,7 @@ wk.register({
     ['<c-s>'] = { '/', 'Incremental search' },
     ['<c-s-s>'] = { '?', 'Backward incremental search' },
     ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
-    ['gs'] = { '<Plug>Lightspeed_omni_gs', 'Lightspeed multi buffer' },
+    ['S'] = { '<Plug>Lightspeed_omni_gs', 'Lightspeed multi buffer' },
 
     -- wrapped line movement
     k = {'gk', 'Up line'},
