@@ -225,11 +225,6 @@ return require('packer').startup(function(use)
 
         -- note taking
         use {
-            'jakewvincent/mkdnflow.nvim',
-            rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
-            config = function() require('plugins.mkdnflow') end
-        }
-        use {
             "iamcco/markdown-preview.nvim",
             run = function() vim.fn["mkdp#util#install"]() end,
         }

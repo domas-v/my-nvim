@@ -146,26 +146,26 @@ wk.register({
         ["*"] = { "<cmd>BufferCloseAllButPinned<cr>", "Delete all but pinned" },
     },
 
-    m = {
-        name = "Note taking",
-        M = { "<cmd> lua require('nabla').popup()<cr>", "Math popup" },
-        e = { "<cmd> lua require('nabla').enable_virt()<cr>", "Enable virtual text" },
-        d = { "<cmd> lua require('nabla').disable_virt()<cr>", "Disable virtual text" },
-        p = { "<cmd> MarkdownPreview<cr>", "Markdown preview" },
-    },
+    -- m = {
+    --     name = "Note taking",
+    --     M = { "<cmd> lua require('nabla').popup()<cr>", "Math popup" },
+    --     e = { "<cmd> lua require('nabla').enable_virt()<cr>", "Enable virtual text" },
+    --     d = { "<cmd> lua require('nabla').disable_virt()<cr>", "Disable virtual text" },
+    --     p = { "<cmd> MarkdownPreview<cr>", "Markdown preview" },
+    -- },
 
     M = { "<cmd>tab sp<cr>", "Maximise current window" },
-    -- m = {
-    --     name = "Tabs",
-    --     m = { "<cmd>tabnew<cr>", "New tab" },
-    --     c = { "<cmd>tabclose<cr>", "Close tab" },
-    --     o = { "<cmd>tabonly<cr>", "Close all but current" },
-    --     ["1"] = { "<cmd> tabn 1<cr>", "Go to 1"},
-    --     ["2"] = { "<cmd> tabn 2<cr>", "Go to 2"},
-    --     ["3"] = { "<cmd> tabn 3<cr>", "Go to 3"},
-    --     ["4"] = { "<cmd> tabn 4<cr>", "Go to 4"},
-    --     ["5"] = { "<cmd> tabn 5<cr>", "Go to 5"},
-    -- },
+    m = {
+        name = "Tabs",
+        m = { "<cmd>tabnew<cr>", "New tab" },
+        c = { "<cmd>tabclose<cr>", "Close tab" },
+        o = { "<cmd>tabonly<cr>", "Close all but current" },
+        ["1"] = { "<cmd> tabn 1<cr>", "Go to 1"},
+        ["2"] = { "<cmd> tabn 2<cr>", "Go to 2"},
+        ["3"] = { "<cmd> tabn 3<cr>", "Go to 3"},
+        ["4"] = { "<cmd> tabn 4<cr>", "Go to 4"},
+        ["5"] = { "<cmd> tabn 5<cr>", "Go to 5"},
+    },
 
     d = {
         -- ignore a,n,p,v - used for diagnostics
