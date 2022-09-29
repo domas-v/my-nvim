@@ -223,25 +223,11 @@ return require('packer').startup(function(use)
             config = function() require("plugins.debugger") end
         }
 
-        -- note taking
-        use {
-            "iamcco/markdown-preview.nvim",
-            run = function() vim.fn["mkdp#util#install"]() end,
-        }
-        use {
-            'jbyuki/nabla.nvim',
-            config = function() require('nabla').enable_virt() end
-        }
+        -- misc
+        use { 'dstein64/vim-startuptime' }
         use {
             "loqusion/true-zen.nvim",
             config = function() require("true-zen").setup() end
         }
-        use {
-            "michaelb/sniprun",
-            run = 'bash ./install.sh'
-        }
-
-        -- misc
-        use { 'dstein64/vim-startuptime' }
     end
 end)
