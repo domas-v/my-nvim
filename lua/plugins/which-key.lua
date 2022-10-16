@@ -25,7 +25,7 @@ wk.register({
     ["."] = { ":lcd %:p:h<cr>:pwd<cr>", "Change to current dir" },
     q = { "<cmd>q<cr>", "Close" },
     Q = { "<cmd>qa<cr>", "Close all" },
-    [";"] = { "<cmd>Telescope commands<cr>", "Commands" },
+    [":"] = { "<cmd>Telescope commands<cr>", "Commands" },
     ["?"] = { "<cmd>Telescope help_tags<cr>", "Help" },
     ["<leader>"] = {
         name = "Misc",
@@ -40,13 +40,13 @@ wk.register({
     ["<TAB>"] = { "<cmd>NeoTreeFocusToggle<cr>", "Neotree" },
 
     -- file and buffer movement
-    f = { "<cmd>Telescope find_files<cr>", "Find files" },
-    F = { "<cmd>Telescope file_browser<cr>", "Telescope file browser" },
-    s = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Search current buffer" },
-    S = { "<cmd>Telescope live_grep<cr>", "Search in workspace" },
-    l = { "<cmd>Telescope buffers<cr>", "Buffers" },
-    y = { "<cmd>Telescope neoclip<cr>", "Neoclip" },
-    r = { "<cmd>Telescope registers<cr>", "Registers" },
+    f = { "<cmd>Telescope find_files<cr>", "find files" },
+    F = { "<cmd>Telescope file_browser<cr>", "file browser" },
+    s = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "telescope buffer" },
+    r = { "<cmd>Telescope live_grep<cr>", "ripgrep" },
+    l = { "<cmd>Telescope buffers<cr>", "buffers" },
+    y = { "<cmd>Telescope neoclip<cr>", "clipboard" },
+    ["'"] = { "<cmd>Telescope registers<cr>", "registers" },
 
     -- terminal
     T = { "<cmd>ToggleTerm<cr>", "Toggle Terminal"},
@@ -98,35 +98,31 @@ wk.register({
         x = { "<cmd>sp ", "Split horizontal" },
     },
 
-    W = { "<cmd>BufferPick<cr>", "Pick buffer" },
+    W = { "<cmd>lua require('nvim-window').pick()<cr>", "Select window" },
     k = { "<cmd>BufferNext<cr>", "Next" },
     j = { "<cmd>BufferPrevious<cr>", "Previous" },
+    O = { "<cmd>only<cr>", "Close other" },
+    ["*"] = { "<cmd>BufferPin<cr>", "Pin" },
+    ["]"] = { "<cmd>BufferMoveNext<cr>", "Move next" },
+    ["["] = { "<cmd>BufferMovePrevious<cr>", "Move previous" },
+    ["1"] = { "<cmd>BufferGoto 1<cr>", "Goto 1" },
+    ["2"] = { "<cmd>BufferGoto 2<cr>", "Goto 2" },
+    ["3"] = { "<cmd>BufferGoto 3<cr>", "Goto 3" },
+    ["4"] = { "<cmd>BufferGoto 4<cr>", "Goto 4" },
+    ["5"] = { "<cmd>BufferGoto 5<cr>", "Goto 5" },
+    ["0"] = { "<cmd>BufferLast<cr>", "Goto last" },
     w = {
         name = "Buffer/Window movement",
-        n = { "<cmd>BufferNext<cr>", "Next" },
-        p = { "<cmd>BufferPrevious<cr>", "Previous" },
         v = { ":vert sb ", "Split vertical" },
-        x = { ":sbuffer ", "Split horizontal" },
-        o = { "<cmd>only<cr>", "Close other" },
-        w = { "<cmd>lua require('nvim-window').pick()<cr>", "Select window" },
+        s = { ":sbuffer ", "Split horizontal" },
         r = { "<cmd>WinResizerStartResize<cr>", "Resize window" },
-        ["*"] = { "<cmd>BufferPin<cr>", "Pin" },
-        ["]"] = { "<cmd>BufferMoveNext<cr>", "Move next" },
-        ["["] = { "<cmd>BufferMovePrevious<cr>", "Move previous" },
-        ["1"] = { "<cmd>BufferGoto 1<cr>", "Goto 1" },
-        ["2"] = { "<cmd>BufferGoto 2<cr>", "Goto 2" },
-        ["3"] = { "<cmd>BufferGoto 3<cr>", "Goto 3" },
-        ["4"] = { "<cmd>BufferGoto 4<cr>", "Goto 4" },
-        ["5"] = { "<cmd>BufferGoto 5<cr>", "Goto 5" },
-        ["0"] = { "<cmd>BufferLast<cr>", "Goto last" },
         m = { "<cmd>WinShift<cr>", "Winshift mode" },
         h = { "<cmd>WinShift left<cr>", "Move window left" },
         k = { "<cmd>WinShift up<cr>", "Move window up" },
         j = { "<cmd>WinShift down<cr>", "Move window down" },
         l = { "<cmd>WinShift right<cr>", "Move window right" },
-        b = {
+        w = {
             name = "Buffers movement in buffline (Does not work!!)",
-            b = {":BufferMove ", "Move mode"},
             ["1"] = {"<cmd>BufferMove 1<cr>", "Move to 1"},
             ["2"] = {"<cmd>BufferMove 2<cr>", "Move to 2"},
             ["3"] = {"<cmd>BufferMove 3<cr>", "Move to 3"},
@@ -193,7 +189,6 @@ wk.register({
     ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
     ['<'] = { '<gv', 'Maintain selection after visual indent' },
     ['>'] = { '>gv', 'Maintain selection after visual indent' },
-    [';'] = { ':', "Command mode" },
     ["<leader>de"] = { "<cmd>lua require('dapui').eval()<cr>", "DAP eval" }
 }, { mode = "v" })
 
@@ -211,7 +206,6 @@ wk.register({
     ['0'] = { 'g0', 'First line char' },
     ['$'] = { 'g$', 'Last line line' },
     Y = { 'y$', "Yank from cursor till end of line" },
-    [';'] = { ':', 'Command mode' }
 })
 
 -- insert mode maps
