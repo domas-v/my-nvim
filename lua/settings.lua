@@ -33,6 +33,7 @@ o.shortmess= o.shortmess .. 'c'
 -- line numbers
 wo.linebreak = true
 o.number = true
+o.relativenumber = true
 
 -- appearance
 wo.conceallevel = 2

@@ -26,19 +26,19 @@ require('mkdnflow').setup({
         auto_extend_cols = false
     },
     mappings = {
-        MkdnYankAnchorLink = {'n', '<leader>my'},
-        MkdnMove = {'n', '<leader>mm'},
-        MkdnFoldSection = {'n', '<leader>mf'},
-        MkdnUnfoldSection = {'n', '<leader>mF'},
-        MkdnNextHeading = {'n', '<leader>ml'},
-        MkdnPrevHeading = {'n', '<leader>mh'},
+        MkdnYankAnchorLink = {'n', '<leader>ny'},
+        MkdnMove = {'n', '<leader>nm'},
+        MkdnFoldSection = {'n', '<leader>nf'},
+        MkdnUnfoldSection = {'n', '<leader>nF'},
+        MkdnNextHeading = {'n', '<leader>nl'},
+        MkdnPrevHeading = {'n', '<leader>nh'},
         MkdnTagSpan = {'v', '<M-CR>'},
-        MkdnToggleToDo = {{'n', 'v'}, '<leader>mt'},
+        MkdnToggleToDo = {{'n', 'v'}, '<leader>nt'},
 
         -- table maps
-        MkdnTableNewRowBelow = {'n', '<leader>mTr'},
-        MkdnTableNewRowAbove = {'n', '<leader>mTR'},
-        MkdnTableNewColAfter = {'n', '<leader>mTc'},
-        MkdnTableNewColBefore = {'n', '<leader>mTC'},
+        MkdnTableNewRowBelow = {'n', '<leader>nTr'},
+        MkdnTableNewRowAbove = {'n', '<leader>nTR'},
+        MkdnTableNewColAfter = {'n', '<leader>nTc'},
+        MkdnTableNewColBefore = {'n', '<leader>nTC'},
     }
 })

@@ -223,6 +223,13 @@ return require('packer').startup(function(use)
 
     -- misc
     use { 'dstein64/vim-startuptime' }
+
+    -- note taking
+    -- TODO: obsidian stuff support
+    use {
+        "jbyuki/nabla.nvim",
+        config = function() require"nabla".enable_virt() end
+    }
     use {
         "loqusion/true-zen.nvim",
         config = function() require("true-zen").setup() end

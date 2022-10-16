@@ -66,7 +66,7 @@ wk.register({
 
     -- code navigation
     o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" },
-    n = {
+    c = {
         name = "Code navigation",
         r = { "<cmd>Telescope lsp_references<cr>", "References" },
         d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
@@ -78,8 +78,8 @@ wk.register({
     G = { "<cmd>Neogit<cr>", "Git" },
     g = {
         name = "Git",
-        n = { "<cmd>Gitsigns next_hunk<cr>", "Next hunk" },
-        p = { "<cmd>Gitsigns prev_hunk<cr>", "Previous hunk" },
+        j = { "<cmd>Gitsigns next_hunk<cr>", "Next hunk" },
+        k = { "<cmd>Gitsigns prev_hunk<cr>", "Previous hunk" },
         v = { "<cmd>Gitsigns preview_hunk<cr>", "Preview hunk" },
 
         s = { "<cmd>Gitsigns stage_hunk<cr>", "Stage hunk" },
@@ -146,13 +146,13 @@ wk.register({
         ["*"] = { "<cmd>BufferCloseAllButPinned<cr>", "Delete all but pinned" },
     },
 
-    -- m = {
-    --     name = "Note taking",
-    --     M = { "<cmd> lua require('nabla').popup()<cr>", "Math popup" },
-    --     e = { "<cmd> lua require('nabla').enable_virt()<cr>", "Enable virtual text" },
-    --     d = { "<cmd> lua require('nabla').disable_virt()<cr>", "Disable virtual text" },
-    --     p = { "<cmd> MarkdownPreview<cr>", "Markdown preview" },
-    -- },
+    n = {
+        name = "Note taking",
+        M = { "<cmd> lua require('nabla').popup()<cr>", "Math popup" },
+        e = { "<cmd> lua require('nabla').enable_virt()<cr>", "Enable virtual text" },
+        d = { "<cmd> lua require('nabla').disable_virt()<cr>", "Disable virtual text" },
+        p = { "<cmd> MarkdownPreview<cr>", "Markdown preview" },
+    },
 
     M = { "<cmd>tab sp<cr>", "Maximise current window" },
     m = {
