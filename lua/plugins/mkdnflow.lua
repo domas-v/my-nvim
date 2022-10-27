@@ -2,11 +2,11 @@ require('mkdnflow').setup({
     perspective = {
         priority = 'root',
         fallback = 'first',
-        root_tell = 'Inbox.md',
+        -- root_tell = 'Inbox.md',
         nvim_wd_heel = true
     },
     links = {
-        style = 'markdown',
+        style = 'wiki',
         conceal = false,
         implicit_extension = ".md",
         transform_implicit = false,
@@ -16,7 +16,7 @@ require('mkdnflow').setup({
         end
     },
     to_do = {
-        symbols = {' ', 'X'},
+        symbols = {' ', 'x'},
         update_parents = true,
     },
     tables = {

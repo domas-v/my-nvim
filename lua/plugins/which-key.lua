@@ -63,6 +63,7 @@ wk.register({
 
     -- replace
     R = { ":%s/", "Buffer Replace" },
+    ["<leader>r"] = { "<cmd>lua require('replacer').run({ rename_files = false })<cr>", "Buffer Replace" },
 
     -- code navigation
     o = { "<cmd>SymbolsOutline<cr>", "Symbols Outline" },
@@ -184,9 +185,9 @@ wk.register({
 
 -- visual mode maps
 wk.register({
-    ['<c-s>'] = { '/', 'Incremental search' },
-    ['<c-s-s>'] = { '?', 'Backward incremental search' },
-    ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
+    -- ['<c-s>'] = { '/', 'Incremental search' },
+    -- ['<c-s-s>'] = { '?', 'Backward incremental search' },
+    -- ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
     ['<'] = { '<gv', 'Maintain selection after visual indent' },
     ['>'] = { '>gv', 'Maintain selection after visual indent' },
     ["<leader>de"] = { "<cmd>lua require('dapui').eval()<cr>", "DAP eval" }
@@ -195,10 +196,10 @@ wk.register({
 -- normal mode maps
 wk.register({
     ['<esc>'] = { ':nohlsearch<cr>', 'Remove search highlighting' },
-    ['<c-s>'] = { '/', 'Incremental search' },
-    ['<c-s-s>'] = { '?', 'Backward incremental search' },
-    ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
-    ['S'] = { '<Plug>Lightspeed_omni_gs', 'Lightspeed multi buffer' },
+    -- ['<c-s>'] = { '/', 'Incremental search' },
+    -- ['<c-s-s>'] = { '?', 'Backward incremental search' },
+    -- ['s'] = { '<Plug>Lightspeed_omni_s', "Lightspeed" },
+    -- ['S'] = { '<Plug>Lightspeed_omni_gs', 'Lightspeed multi buffer' },
 
     -- wrapped line movement
     k = {'gk', 'Up line'},
@@ -210,8 +211,8 @@ wk.register({
 
 -- insert mode maps
 wk.register({
-    ['<c-s>'] = { '<esc>/', 'Incremental search' },
-    ['<c-s-s>'] = { '<esc>?', 'Backwarnd incremental search' },
+    -- ['<c-s>'] = { '<esc>/', 'Incremental search' },
+    -- ['<c-s-s>'] = { '<esc>?', 'Backwarnd incremental search' },
 }, { mode = "i" })
 
 

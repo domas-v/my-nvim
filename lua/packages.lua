@@ -5,11 +5,8 @@ return require('packer').startup(function(use)
     }
 
     use {
-        'ggandor/lightspeed.nvim',
-        config = function () require('lightspeed').setup({
-            ignore_case = true
-        })
-        end
+        "woosaaahh/sj.nvim",
+        config = function() require("plugins.sj") end
     }
 
     use {
@@ -189,6 +186,7 @@ return require('packer').startup(function(use)
     -- search
     use {
         'kevinhwang91/nvim-hlslens',
+        config = function () require("hlslens").setup() end
     }
     use {
         'kevinhwang91/nvim-bqf',
@@ -225,7 +223,6 @@ return require('packer').startup(function(use)
     use { 'dstein64/vim-startuptime' }
 
     -- note taking
-    -- TODO: obsidian stuff support
     use {
         "jbyuki/nabla.nvim",
         config = function() require"nabla".enable_virt() end
@@ -233,5 +230,10 @@ return require('packer').startup(function(use)
     use {
         "loqusion/true-zen.nvim",
         config = function() require("true-zen").setup() end
+    }
+    use{
+        'jakewvincent/mkdnflow.nvim',
+        rocks = 'luautf8',
+        config = function() require('plugins.mkdnflow') end
     }
 end)
